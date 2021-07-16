@@ -96,3 +96,8 @@ docker run -v crackshmackin:/crackshmackin/data \
   -e CRACKSHMACKIN_DISCORD_HOOK=https://discord.com/api/webhooks/999999999999999999/oxdeadbeefoxdeadbeefoxdeadbeefoxdeadbeef \
   -it --rm xmconstantx/crackshmackin
 ```
+
+Configure:
+
+![image](https://user-images.githubusercontent.com/85532172/125996834-01920631-8f5c-4e04-ab60-561ce65514a1.png)
+
