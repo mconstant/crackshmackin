@@ -74,7 +74,7 @@ for that.
 e.g.:
 
 ```sh
-docker run -v crackshmackin:/crackshmackin -e MAX_BYTES_SHUCKS_FILE=`00000000 -it xmconstantx/crackshmackin
+docker run -v crackshmackin:/crackshmackin -e MAX_BYTES_SHUCKS_FILE=100000000 -it xmconstantx/crackshmackin
 ```
 
 would set this to ~100MB. This file grows much more slowly than the `f.addresses` file since it makes one line every 10 seconds or so due to API limitations when checking wallet balances.
