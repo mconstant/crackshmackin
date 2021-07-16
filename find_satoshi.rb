@@ -31,7 +31,7 @@ def checksum(hex)
   sha256(sha256(hex))[0...8]
 end
 
-def int_to_base58(int_val, leading_zero_bytes=0)
+def int_to_base58(int_val, leading_zero_bytes = 0)
   alpha = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
   base58_val, base = '', alpha.size
   while int_val > 0
@@ -43,10 +43,11 @@ end
 
 def encode_base58(hex)
   leading_zero_bytes = (hex.match(/^([0]+)/) ? $1 : '').size / 2
-  ("1"*leading_zero_bytes) + int_to_base58( hex.to_i(16) )
+  ("1" * leading_zero_bytes) + int_to_base58(hex.to_i(16))
 end
 
 PRIV_KEY_VERSION = '80'
+
 def wif(hex)
   data = PRIV_KEY_VERSION + hex
   encode_base58(data + checksum(data))
@@ -56,21 +57,27 @@ current_wif = '5HpHagT65TZzG1PH3CSu63k8DbpvD8s5ip4nEB3kEsreAnchuDf'
 current_address = Bitcoin::Key.from_base58(current_wif).addr
 addresses_checked = 0
 # satoshi address with ~64BTC '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'
+i_talked = false
 until (current_address == '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa') do
   File.open('/crackshmackin/data/f.addresses', 'a') do |f|
     f.puts("WIF: #{current_wif} | Address: #{current_address}")
   end
   if (File.size('/crackshmackin/data/f.addresses') > ENV["MAX_BYTES_F_ADDRESSES"].to_i)
-    `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "She cannot take any more of this, Captain! f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f/1000000).to_i}MB reached."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
-    abort("She cannot take any more of this, Captain! f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f/1000000).to_i}MB reached.")
+    `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "She cannot take any more of this, Captain! f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f / 1000000).to_i}MB reached."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+    abort("She cannot take any more of this, Captain! f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f / 1000000).to_i}MB reached.")
   end
   current_wif = wif(generate_key)
   current_address = Bitcoin::Key.from_base58(current_wif).addr
   if ((ENV["VERBOSE_DISCORD_NOTIFICATIONS"] == "true") && ((Time.now.min % 5) == 0))
-    `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "crackshmackin has found #{addresses_checked} pairs of public and private keys and has found #{File.readlines('/crackshmackin/data/fyeah.bux').length} accounts with satoshis."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
-    if (File.readlines("/crackshmackin/data/fyeah.bux").length > 0)
-      `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "These are the accounts I have found with balances:\n#{File.readlines('/crackshmackin/data/fyeah.bux').join($/)}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+    if (i_talked == false)
+      `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "crackshmackin has found #{addresses_checked} pairs of public and private keys and has found #{File.readlines('/crackshmackin/data/fyeah.bux').length} accounts with satoshis."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+      if (File.readlines("/crackshmackin/data/fyeah.bux").length > 0)
+        `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "These are the accounts I have found with balances:\n#{File.readlines('/crackshmackin/data/fyeah.bux').join($/)}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+      end
+      i_talked = true
     end
+  else
+    i_talked = false
   end
   addresses_checked += 1
 end
