@@ -99,9 +99,9 @@ docker run -v crackshmackin:/crackshmackin/data \
 
 Configure:
 
-![image](https://user-images.githubusercontent.com/85532172/125996834-01920631-8f5c-4e04-ab60-561ce65514a1.png)
+![ConfigureDiscordWebhook](https://user-images.githubusercontent.com/85532172/125997350-b2b39f38-0839-451d-80f4-53ff4ba71ac0.png)
 
 Nerd out:
 
-![image](https://user-images.githubusercontent.com/85532172/125997206-6316654f-6872-4819-81bd-1b5ec3df2425.png)
+![DiscordWebhookInUse](https://user-images.githubusercontent.com/85532172/125997206-6316654f-6872-4819-81bd-1b5ec3df2425.png)
 
