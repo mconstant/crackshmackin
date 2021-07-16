@@ -30,7 +30,7 @@ git clone https://github.com/mconstant/crackshmackin.git && make out_like_a_band
 
 Not to disappoint you, but you really don't have a chance running this. It is just for fun.
 
-More info here: [![YouStandNoChance(https://img.youtube.com/vi/S9JGmA5_unY/0.jpg)](https://www.youtube.com/watch?v=S9JGmA5_unY)
+More info here: [![YouStandNoChance](https://img.youtube.com/vi/S9JGmA5_unY/0.jpg)](https://www.youtube.com/watch?v=S9JGmA5_unY)
 
 ## In Action
 [![asciicast](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh.png)](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh)
