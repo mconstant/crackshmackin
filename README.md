@@ -2,6 +2,8 @@
 
 So you want to bruteforce a Bitcoin Private Key.... mmmmmkay....
 
+[![asciicast](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh.png)](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh)
+
 ## What Th'? 
 
 ![WTF](./816523389795434517.gif) 
@@ -45,7 +47,5 @@ And here:
 
 [![NoReally](https://img.youtube.com/vi/lPqFTbGyq8I/0.jpg)](https://www.youtube.com/watch?v=lPqFTbGyq8I&t=1s)
 
-## In Action
-[![asciicast](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh.png)](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh)
 
-Thank you DW for the cast.
+Thank you DW for the ASCII cast.
