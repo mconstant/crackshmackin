@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install build-essential curl tmux -y
 ENV MAX_BYTES_F_ADDRESSES=20000000
 # max size of shucks.sux file in bytes, e.g. 10000000 would make it max out at ~10Mb
 ENV MAX_BYTES_SHUCKS_FILE=10000000
+# discord hook
+ENV CRACKSHMACKIN_DISCORD_HOOK=""
 
 RUN gem install bundler
 
