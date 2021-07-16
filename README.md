@@ -8,6 +8,8 @@
 
 Find one of Satoshi's treasures by attempting to stumble upon the private key of this known address of the Satoshin -- 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa.
 
+Once you have the WIF you can import into your wallet, Sathoshi, and then maybe try to remember your password. You do remember it, right?
+
 The address at this moment in time holds 68.44938308 BTC, which is a sum that can buy at this time almost 11 lambo or an unspecified amount of "Bitcoin Pizza"
 
 This repo was not written by Satoshi. But we were inspired by his ability to stay anonymous so we used his email address for the "Anon" commits.
