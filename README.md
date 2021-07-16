@@ -2,7 +2,6 @@
 
 So you want to bruteforce a Bitcoin Private Key.... mmmmmkay....
 
-[![asciicast](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh.png)](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh)
 ## What Th'? 
 ![WTF](./816523389795434517.gif) 
 
@@ -15,6 +14,10 @@ Once you have the WIF you can import into your wallet, Satoshi, and then maybe t
 The address at this moment in time holds 68.44938308 BTC, which is a sum that can buy at this time almost 11 lambo or an unspecified amount of "Bitcoin Pizza"
 
 This repo was not written by Satoshi. But we were inspired by his ability to stay anonymous so we used his email address for the "Anon" commits.
+
+## Demo
+
+[![asciicast](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh.png)](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh)
 
 ## Prior Work / Inspiration
 
