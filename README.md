@@ -14,7 +14,7 @@ The address at this moment in time holds 68.44938308 BTC, which is a sum that ca
 
 This repo was not written by Satoshi. But we were inspired by his ability to stay anonymous so we used his email address for the "Anon" commits.
 
-## Prior Work / Ispiration
+## Prior Work / Inspiration
 
 - https://keys.lol - Yo Dawg... I heard you like needles in haystacks, so I put your needles in haystacks in haystacks...
 - https://bhelx.simst.im/articles/generating-bitcoin-keys-from-scratch-with-ruby/ - This code bit off this guys work a bit. So credit to him... ok?
