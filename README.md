@@ -17,7 +17,7 @@ git clone https://github.com/mconstant/crackshmackin.git && make out_like_a_band
 
 `crackshmackin` is a naive, brute-force/dumb-luck/heart-o-gold/hail-mary attempt to help anyone discover that they are Satoshi.
 
-Find one of Satoshi's treasures by attempting to stumble upon the private key of this known address of the Satoshin -- 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa.
+Find one of Satoshi's treasures by attempting to stumble upon the private key of this known address of the Satoshin -- [1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa](https://www.blockchain.com/btc/address/1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa).
 
 Once you have the WIF you can import into your wallet, Satoshi, and then maybe try to remember your password. 
 
