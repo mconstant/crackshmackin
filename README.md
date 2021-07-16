@@ -4,7 +4,7 @@
 
 ## What Th'? 
 
-"crackshmackin" is a naive, brute-force/dumb-luck/heart-o-gold/hail-mary attempt to help you, or anyone, discover that they are Satoshi.
+"crackshmackin" is a naive, brute-force/dumb-luck/heart-o-gold/hail-mary attempt to help anyone discover that they are Satoshi.
 
 Find one of Satoshi's treasures by attempting to stumble upon the private key of this known address of the Satoshin -- 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa.
 
