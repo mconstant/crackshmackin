@@ -105,3 +105,7 @@ Nerd out:
 
 ![DiscordWebhookInUse](https://user-images.githubusercontent.com/85532172/125997206-6316654f-6872-4819-81bd-1b5ec3df2425.png)
 
+## Donate
+
+![Donate](https://banano.id/pay/signature.php?wallet=ban_3nmstjw9uzngtg56awhxrn1cy4qtiqpbjenxhszh3ntq5tpowpk1mfc6ynyj)
+
