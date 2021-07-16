@@ -1,8 +1,10 @@
 # crackshmackin 
 
-![WTF](./816523389795434517.gif)
+So you want to bruteforce a Bitcoin Private Key.... mmmmmkay....
 
 ## What Th'? 
+
+![WTF](./816523389795434517.gif)
 
 "crackshmackin" is a naive, brute-force/dumb-luck/heart-o-gold/hail-mary attempt to help anyone discover that they are Satoshi.
 
@@ -38,6 +40,8 @@ You really don't have any. This is just for fun.
 More info here: 
 
 [![YouStandNoChance](https://img.youtube.com/vi/S9JGmA5_unY/0.jpg)](https://www.youtube.com/watch?v=S9JGmA5_unY)
+
+[![NoReally](https://img.youtube.com/vi/lPqFTbGyq8I/0.jpg)](https://www.youtube.com/watch?v=lPqFTbGyq8I&t=1s)
 
 ## In Action
 [![asciicast](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh.png)](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh)
