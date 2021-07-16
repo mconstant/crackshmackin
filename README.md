@@ -2,6 +2,16 @@
 
 So you want to bruteforce a Bitcoin Private Key.... mmmmmkay....
 
+## Quickstart
+```sh
+docker run -v crackshmackin:/crackshmackin -it xmconstantx/crackshmackin
+```
+
+alternately
+```sh
+git clone https://github.com/mconstant/crackshmackin.git && make out_like_a_bandit
+```
+
 ## What Th'? 
 ![WTF](./816523389795434517.gif) 
 
@@ -23,18 +33,6 @@ This repo was not written by Satoshi. But we were inspired by his ability to sta
 
 - https://keys.lol - Yo Dawg... I heard you like needles in haystacks, so I put your needles in haystacks in haystacks...
 - https://bhelx.simst.im/articles/generating-bitcoin-keys-from-scratch-with-ruby/ - This code bit off this guys work a bit. So credit to him... ok?
-
-## Usage
-
-quickstart:
-```sh
-docker run -v crackshmackin:/crackshmackin -it xmconstantx/crackshmackin
-```
-
-alternately
-```sh
-git clone https://github.com/mconstant/crackshmackin.git && make out_like_a_bandit
-```
 
 ## What are my chances of scoring Satoshi's treasure (or anything at all)?
 
