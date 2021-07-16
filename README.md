@@ -4,7 +4,9 @@ So you want to bruteforce a Bitcoin Private Key.... mmmmmkay....
 
 ## What Th'? 
 
-![WTF](./816523389795434517.gif) "crackshmackin" is a naive, brute-force/dumb-luck/heart-o-gold/hail-mary attempt to help anyone discover that they are Satoshi.
+![WTF](./816523389795434517.gif) 
+
+"crackshmackin" is a naive, brute-force/dumb-luck/heart-o-gold/hail-mary attempt to help anyone discover that they are Satoshi.
 
 Find one of Satoshi's treasures by attempting to stumble upon the private key of this known address of the Satoshin -- 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa.
 
