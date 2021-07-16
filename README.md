@@ -27,4 +27,4 @@ git clone https://github.com/mconstant/crackshmackin.git && make out_like_a_band
 ## In Action
 [![asciicast](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh.png)](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh)
 
-Thanks to DW for that cast.
+Thank you DW for the cast.
