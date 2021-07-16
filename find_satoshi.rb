@@ -12,7 +12,7 @@
 # These scripts are not-any-at-all-optimised, not guaranteed, and are here for fun. They were inspired by https://keys.lol and other things like that.
 #
 # Don't be lazy, don't be crazy, vote Kenny Powers.
-
+`curl -H "Content-Type: application/json"-d '{"username": "crackshmackin", "content": "Searching for Satoshi"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
 require 'bitcoin'
 require 'securerandom'
 require 'digest'
@@ -59,10 +59,14 @@ until (current_address == '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa') do
   File.open('/crackshmackin/data/f.addresses', 'a') do |f|
     f.puts("WIF: #{current_wif} | Address: #{current_address}")
   end
-  abort("She cannot take any more of this, Captain!") if (File.size('/crackshmackin/data/f.addresses') > ENV["MAX_BYTES_F_ADDRESSES"].to_i)
+  if (File.size('/crackshmackin/data/f.addresses') > ENV["MAX_BYTES_F_ADDRESSES"].to_i)
+    `curl -H "Content-Type: application/json"-d '{"username": "crackshmackin", "content": "She cannot take any more of this, Captain! f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f/1000000).to_i}MB reached."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+    abort("She cannot take any more of this, Captain! f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f/1000000).to_i}MB reached.")
+  end
   current_wif = wif(generate_key)
   current_address = Bitcoin::Key.from_base58(current_wif).addr
 end
 File.open('/crackshmackin/data/final.destination', 'a') do |f|
+  `curl -H "Content-Type: application/json"-d '{"username": "crackshmackin", "content": "You found Satoshi's private key (WIF) #{current_wif} for the address #{current_address}."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
   f.puts("WIF: #{current_wif} | Address: #{current_address}")
 end
