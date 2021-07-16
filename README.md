@@ -61,8 +61,24 @@ This brute loves to hog your disk! The default max size for `f.addresses`, the f
 
 for that.
 
+e.g.:
+
+```sh
+docker run -v crackshmackin:/crackshmackin -e MAX_BYTES_F_ADDRESSES=200000000000 -it xmconstantx/crackshmackin
+```
+
+would set this to ~200GB
+
 There is another environment variable to set the default max size for the file `shucks.sux`, a file which stores all the addresses you have private keys for that turn out to have a zero balance (and what's that worth?). Use
 
 `MAX_BYTES_SHUCKS_FILE`
 
 for that.
+
+e.g.:
+
+```sh
+docker run -v crackshmackin:/crackshmackin -e MAX_BYTES_SHUCKS_FILE=`00000000 -it xmconstantx/crackshmackin
+```
+
+would set this to ~100MB
