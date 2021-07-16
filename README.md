@@ -1,6 +1,6 @@
 # crackshmackin 
 
-## What Th'?
+## What Th'? ![WTF](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 "crackshmackin" is a naive, brute-force/dumb-luck/heart-o-gold/hail-mary attempt to help you, or anyone, discover that they are Satoshi.
 
