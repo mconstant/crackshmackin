@@ -55,7 +55,7 @@ Thank you DW for the ASCII cast.
 
 ### Using more disk
 
-This brute loves to hog your disk! The default max size for `f.addresses`, the fun file where the script saves all the incorrect guess addresses and their corresponding private keys to, defaults to a max size of 20mb. But, if you are, maybe a frustrated chia miner, or something, you can set that file to be as big as you please. There is an environment variable 
+This brute loves to hog your disk! The default max size for `f.addresses`, the fun file where the script saves all the incorrect guess addresses and their corresponding private keys to, defaults to a max size of 20mb. But, if you are a [frustrated chia miner](https://www.reddit.com/r/chia/comments/n3948d/i_have_made_a_decision_to_stop_mining/), or something, you can set that file to be as big as you please. There is an environment variable 
 
 `MAX_BYTES_F_ADDRESSES` 
 
