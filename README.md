@@ -16,8 +16,8 @@ This repo was not written by Satoshi. But we were inspired by his ability to sta
 
 ## Prior Work / Ispiration
 
-- https://keys.lol
-- https://bhelx.simst.im/articles/generating-bitcoin-keys-from-scratch-with-ruby/
+- https://keys.lol - Yo Dawg... I heard you like needles in haystacks, so I put your needles in haystacks in haystacks...
+- https://bhelx.simst.im/articles/generating-bitcoin-keys-from-scratch-with-ruby/ - This code bit off this guys work a bit. So credit to him... ok?
 
 ## Usage
 
