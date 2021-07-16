@@ -38,11 +38,11 @@ This repo was not written by Satoshi. But we were inspired by his ability to sta
 
 You really don't have any. This is just for fun.
 
-More info here: 
+Watch this: 
 
 [![YouStandNoChance](https://img.youtube.com/vi/S9JGmA5_unY/0.jpg)](https://www.youtube.com/watch?v=S9JGmA5_unY)
 
-And here:
+And this:
 
 [![NoReally](https://img.youtube.com/vi/lPqFTbGyq8I/0.jpg)](https://www.youtube.com/watch?v=lPqFTbGyq8I&t=1s)
 
