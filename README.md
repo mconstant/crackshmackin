@@ -17,7 +17,7 @@ This repo was not written by Satoshi. But we were inspired by his ability to sta
 ## Prior Work / Ispiration
 
 - https://keys.lol
-- 
+- https://bhelx.simst.im/articles/generating-bitcoin-keys-from-scratch-with-ruby/
 
 ## Usage
 
