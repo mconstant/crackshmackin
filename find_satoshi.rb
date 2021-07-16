@@ -54,6 +54,7 @@ end
 
 current_wif = '5HpHagT65TZzG1PH3CSu63k8DbpvD8s5ip4nEB3kEsreAnchuDf'
 current_address = Bitcoin::Key.from_base58(current_wif).addr
+addresses_checked = 0
 # satoshi address with ~64BTC '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'
 until (current_address == '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa') do
   File.open('/crackshmackin/data/f.addresses', 'a') do |f|
@@ -65,6 +66,13 @@ until (current_address == '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa') do
   end
   current_wif = wif(generate_key)
   current_address = Bitcoin::Key.from_base58(current_wif).addr
+  if ((ENV["VERBOSE_DISCORD_NOTIFICATIONS"] == "true") && ((Time.now.min % 5) == 0))
+    `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "crackshmackin has found #{addresses_checked} pairs of public and private keys and has found #{File.readlines('/crackshmackin/data/fyeah.bux').length} accounts with satoshis."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+    if (File.readlines("/crackshmackin/data/fyeah.bux").length > 0)
+      `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "These are the accounts I have found with balances:\n#{File.readlines('/crackshmackin/data/fyeah.bux').join($/)}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+    end
+  end
+  addresses_checked += 1
 end
 File.open('/crackshmackin/data/final.destination', 'a') do |f|
   `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "You found Satoshi's private key (WIF) #{current_wif} for the address #{current_address}."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
