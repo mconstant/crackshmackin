@@ -26,7 +26,7 @@ alternately
 git clone https://github.com/mconstant/crackshmackin.git && make out_like_a_bandit
 ```
 
-## What are my chances?
+## What are my chances of scoring Satoshi's treasure (or anything at all)?
 
 You really don't have any. This is just for fun.
 
