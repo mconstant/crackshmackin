@@ -56,9 +56,13 @@ Thank you DW for the ASCII cast.
 ### Using more disk
 
 This brute loves to hog your disk! The default max size for `f.addresses`, the fun file where the script saves all the incorrect guess addresses and their corresponding private keys to, defaults to a max size of 20mb. But, if you are, maybe a frustrated chia miner, or something, you can set that file to be as big as you please. There is an environment variable 
-`FOO` 
+
+`MAX_BYTES_F_ADDRESSES` 
+
 for that.
 
 There is another environment variable to set the default max size for the file `shucks.sux`, a file which stores all the addresses you have private keys for that turn out to have a zero balance (and what's that worth?). Use
-`BAR`
+
+`MAX_BYTES_SHUCKS_FILE`
+
 for that.
