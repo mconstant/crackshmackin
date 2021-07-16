@@ -82,7 +82,9 @@ would set this to ~100MB. This file grows much more slowly than the `f.addresses
 ### Discord hooks
 
 Don't you want to know when you have hit paydirt?
+
 ![wen](./Capture.PNG)
+
 Use a Discord hook!
 
 e.g.:
