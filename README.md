@@ -32,7 +32,7 @@ Not to disappoint you, but you really don't have a chance running this. It is ju
 
 More info here: 
 
-[![YouStandNoChance](https://img.youtube.com/vi/S9JGmA5_unY/240.jpg)](https://www.youtube.com/watch?v=S9JGmA5_unY)
+[![YouStandNoChance](https://img.youtube.com/vi/S9JGmA5_unY/0.jpg)](https://www.youtube.com/watch?v=S9JGmA5_unY)
 
 ## In Action
 [![asciicast](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh.png)](https://asciinema.org/a/SQzhtgbPwIeJ4CZhFwbLRPURh)
