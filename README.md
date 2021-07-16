@@ -28,7 +28,7 @@ git clone https://github.com/mconstant/crackshmackin.git && make out_like_a_band
 
 ## What are my chances?
 
-Not to disappoint you, but you really don't have a chance running this. It is just for fun.
+You really don't have any. It is just for fun.
 
 More info here: 
 
