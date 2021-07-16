@@ -86,5 +86,9 @@ Don't you want to know when you have hit paydirt? Use a Discord hook!
 e.g.:
 
 ```sh
-docker run -v crackshmackin:/crackshmackin/data -e MAX_BYTES_SHUCKS_FILE=100000000 -e MAX_BYTES_F_ADDRESSES=200000000000 -e CRACKSHMACKIN_DISCORD_HOOK=https://discord.com/api/webhooks/999999999999999999/oxdeadbeefoxdeadbeefoxdeadbeefoxdeadbeef -it --rm xmconstantx/crackshmackin
+docker run -v crackshmackin:/crackshmackin/data \
+  -e MAX_BYTES_SHUCKS_FILE=100000000 \
+  -e MAX_BYTES_F_ADDRESSES=200000000000 \
+  -e CRACKSHMACKIN_DISCORD_HOOK=https://discord.com/api/webhooks/999999999999999999/oxdeadbeefoxdeadbeefoxdeadbeefoxdeadbeef \
+  -it --rm xmconstantx/crackshmackin
 ```
