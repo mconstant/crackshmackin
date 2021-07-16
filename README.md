@@ -11,7 +11,7 @@ Find one of Satoshi's treasures by attempting to stumble upon the private key of
 
 Once you have the WIF you can import into your wallet, Satoshi, and then maybe try to remember your password. 
 
-The address at this moment in time holds 68.44938308 BTC, which is a sum that can buy at this time almost 11 lambo or an unspecified amount of "Bitcoin Pizza"
+The address at this moment in time holds 68.44938308 BTC, which is a sum that can buy at this time almost 11 lambo or an unspecified amount of "Bitcoin Pizza."
 
 This repo was not written by Satoshi. But we were inspired by his ability to stay anonymous so we used his email address for the "Anon" commits.
 
