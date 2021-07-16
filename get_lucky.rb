@@ -7,8 +7,13 @@ File.readlines('/crackshmackin/data/f.addresses').each do |line|
     File.open('/crackshmackin/data/shucks.sux','a') do |f|
       f.puts("drat, address #{addr} has a balance of #{balance}")
       if File.size('/crackshmackin/data/shucks.sux') > ENV["MAX_BYTES_SHUCKS_FILE"].to_i
-        `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "Enough Already. shucks.sux file has hit its size limit of #{(ENV["MAX_BYTES_SHUCKS_FILE"].to_f/1000000).to_i}MB."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
-        abort("Enough Already. shucks.sux file has hit its size limit of #{(ENV["MAX_BYTES_SHUCKS_FILE"].to_f/1000000).to_i}MB.")
+        max_size_message = "Enough Already. shucks.sux file has hit its size limit of #{(ENV["MAX_BYTES_SHUCKS_FILE"].to_f/1000000).to_i}MB."
+        `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{max_size_message}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+        puts(max_size_message)
+        sign_off_message = "#{File.basename(__FILE__)} signing off"
+        `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{sign_off_message}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+        puts(sign_off_message)
+        exit 0
       end
     end
   else
