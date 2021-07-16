@@ -70,9 +70,13 @@ until (current_address == '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa') do
   current_address = Bitcoin::Key.from_base58(current_wif).addr
   if ((ENV["VERBOSE_DISCORD_NOTIFICATIONS"] == "true") && ((Time.now.min % 5) == 0))
     if (i_talked == false)
-      `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "crackshmackin has found #{addresses_checked} pairs of public and private keys and has found #{File.readlines('/crackshmackin/data/fyeah.bux').length} accounts with satoshis."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
-      if (File.readlines("/crackshmackin/data/fyeah.bux").length > 0)
-        `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "These are the accounts I have found with balances:\n#{File.readlines('/crackshmackin/data/fyeah.bux').join($/)}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+      if File.file?('/crackshmackin/data/fyeah.bux')
+        `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "crackshmackin has found #{addresses_checked} pairs of public and private keys and has found #{File.readlines('/crackshmackin/data/fyeah.bux').length} accounts with satoshis."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+        if (File.readlines("/crackshmackin/data/fyeah.bux").length > 0)
+          `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "These are the accounts I have found with balances:\n#{File.readlines('/crackshmackin/data/fyeah.bux').join($/)}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+        end
+      else
+        `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "crackshmackin has found #{addresses_checked} pairs of public and private keys and 0 accounts with satoshis."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
       end
       i_talked = true
     end
