@@ -13,9 +13,7 @@
 #
 # Don't be lazy, don't be crazy, vote Kenny Powers.
 begin
-  require 'petname'
-  petname = PetName::Generator.new
-  `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: Searching for Satoshi"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+  `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "Searching for Satoshi"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
   require 'bitcoin'
   require 'securerandom'
   require 'digest'
@@ -66,7 +64,7 @@ begin
       f.puts("WIF: #{current_wif} | Address: #{current_address}")
     end
     if File.size('/crackshmackin/data/f.addresses') > ENV["MAX_BYTES_F_ADDRESSES"].to_i
-      `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: She cannot take any more of this, Captain! f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f / 1000000).to_i}MB reached."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+      `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "She cannot take any more of this, Captain! f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f / 1000000).to_i}MB reached."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
       puts("She cannot take any more of this, Captain! f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f / 1000000).to_i}MB reached.")
       break
     end
@@ -74,11 +72,11 @@ begin
     current_address = Bitcoin::Key.from_base58(current_wif).addr
     if (ENV["VERBOSE_DISCORD_NOTIFICATIONS"] == "true") && ((Time.now.min % 5) == 0)
       unless i_talked
-        has_accounts_with_satoshis = File.file?('/crackshmackin/data/fyeah.bux')
+        accounts_with_satoshis = File.readlines('/crackshmackin/data/fyeah.bux').length rescue accounts_with_satoshis = 0
         empty_accounts = File.readlines('/crackshmackin/data/shucks.sux').length rescue empty_accounts = 0
-        `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: crackshmackin has found #{addresses_checked} pairs of public and private keys and has found #{accounts_with_satoshis} accounts with satoshis. It has checked the balances of #{empty_accounts} empty accounts."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
-        if has_accounts_with_satoshis
-          `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: These are the accounts I have found with balances:\n#{File.readlines('/crackshmackin/data/fyeah.bux').join($/)}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+        `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "crackshmackin has found #{addresses_checked} pairs of public and private keys and has found #{accounts_with_satoshis} accounts with satoshis. It has checked the balances of #{empty_accounts} empty accounts."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+        if accounts_with_satoshis > 0
+          `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "These are the accounts I have found with balances:\n#{File.readlines('/crackshmackin/data/fyeah.bux').join($/)}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
         end
         i_talked = true
       end
@@ -89,13 +87,13 @@ begin
   end
   if current_address == '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'
     File.open('/crackshmackin/data/final.destination', 'a') do |f|
-      `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: You found Satoshi's private key (WIF) #{current_wif} for the address #{current_address}."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+      `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "You found Satoshi's private key (WIF) #{current_wif} for the address #{current_address}."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
       f.puts("WIF: #{current_wif} | Address: #{current_address}")
     end
   end
   sign_off_message = "#{File.basename(__FILE__)} signing off"
-  `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: #{sign_off_message}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+  `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{sign_off_message}"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
   puts(sign_off_message)
 ensure
-  `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: #{File.basename(__FILE__)}: crackshmackin shutting down"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+  `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{File.basename(__FILE__)}: crackshmackin shutting down"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
 end
