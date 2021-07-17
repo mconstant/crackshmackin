@@ -1,5 +1,6 @@
 begin
-  petname = `hostname`
+  require 'petname'
+  petname = PetName::Generator.new
   File.readlines('/crackshmackin/data/f.addresses').each do |line|
     addr = line.split(" ").last
     puts "#{addr} Balance is:"
