@@ -73,7 +73,6 @@ begin
     current_address = Bitcoin::Key.from_base58(current_wif).addr
     if (ENV["VERBOSE_DISCORD_NOTIFICATIONS"] == "true") && ((Time.now.min % 5) == 0)
       unless i_talked
-        accounts_with_satoshis = File.readlines('/crackshmackin/data/fyeah.bux').length rescue accounts_with_satoshis = 0
         has_accounts_with_satoshis = File.file?('/crackshmackin/data/fyeah.bux')
         empty_accounts = File.readlines('/crackshmackin/data/shucks.sux').length rescue empty_accounts = 0
         `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: crackshmackin has found #{addresses_checked} pairs of public and private keys and has found #{accounts_with_satoshis} accounts with satoshis. It has checked the balances of #{empty_accounts} empty accounts."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
