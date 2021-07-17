@@ -13,8 +13,7 @@
 #
 # Don't be lazy, don't be crazy, vote Kenny Powers.
 begin
-  require 'petname'
-  petname = PetName::Generator.new
+  petname = `hostname`
   `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: Searching for Satoshi"}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
   require 'bitcoin'
   require 'securerandom'
