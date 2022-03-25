@@ -6,4 +6,3 @@ sleep 1
 tmux new-session -d 'tail -f /crackshmackin/data/shucks.sux'
 tmux split-window -v 'tail -f /crackshmackin/data/f.addresses'
 tmux attach
-tmux reflow
