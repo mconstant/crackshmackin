@@ -116,5 +116,21 @@ Example (simulated) of what a hit might look like:
 ![image](https://user-images.githubusercontent.com/85532172/126001892-54d6ce1e-e708-4ef4-a979-31c2129032ea.png)
 ![image](https://user-images.githubusercontent.com/85532172/126003588-127795fb-66ef-4d61-8566-37ebc6625282.png)
 
+## So you actually want to find a needle in a haystack
+
+Provided you, I dunno, want a chance at actually finding something in this vast keyspace of mostly false turns and empty handedness, you might actually consider a strategy that reduces the keyspace to a manageable level.
+
+If you want to actually find something, consider using a *real tool* to crack something *less secure*
+
+I'm talking about the process of hack/cracking brainwallets, for great good.
+
+Hack someone and then send them a friendly reminder to move their funds like this amazing and groovy guy here. He's used an actually efficient method to approach quickly searching the keyspace including fast-hashed (SHA256) 'brain-wallet' private key generation phrases.
+
+Seriously don't ever use song lyrics and a SHA256 hashing algorithm to cook up your private key:
+
+https://www.youtube.com/watch?v=foil0hzl4Pg
+
+https://github.com/ryancdotorg/brainflayer
+
 
 
