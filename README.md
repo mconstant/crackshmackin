@@ -128,9 +128,9 @@ Hack someone and then send them a friendly reminder to move their funds like thi
 
 Seriously don't ever use song lyrics and a SHA256 hashing algorithm to cook up your private key, or the Nazgul will find you:
 
-![RyanGotchu](https://www.youtube.com/watch?v=foil0hzl4Pg)(https://www.youtube.com/watch?v=foil0hzl4Pg)
+[![RyanGotchu](https://www.youtube.com/watch?v=foil0hzl4Pg)](https://www.youtube.com/watch?v=foil0hzl4Pg)
 
-![Brainflayer](https://github.com/ryancdotorg/brainflayer)(https://github.com/ryancdotorg/brainflayer)
+[![Brainflayer](https://github.com/ryancdotorg/brainflayer)](https://github.com/ryancdotorg/brainflayer)
 
 
 
