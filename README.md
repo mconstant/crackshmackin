@@ -124,13 +124,13 @@ If you want to actually find something, consider using a *real tool* to crack so
 
 I'm talking about the process of hack/cracking brainwallets, for great good.
 
-Hack someone and then send them a friendly reminder to move their funds like this amazing and groovy guy here. He's used an actually efficient method to approach quickly searching the keyspace including fast-hashed (SHA256) 'brain-wallet' private key generation phrases.
+Hack someone and then send them a friendly reminder to move their funds like this amazing and groovy guy here. He's used an actually efficient method to approach quickly searching the keyspace including fast-hashed (SHA256) 'brain-wallet' private key generation phrases. His smort usage of bloom filters and a reduced space differentiates his project and points towards something that differs from this repo, which is a *fun joke* for *fun people* and *clowns with redonkulous luck*.
 
-Seriously don't ever use song lyrics and a SHA256 hashing algorithm to cook up your private key:
+Seriously don't ever use song lyrics and a SHA256 hashing algorithm to cook up your private key, or the Nazgul will find you:
 
-https://www.youtube.com/watch?v=foil0hzl4Pg
+![RyanGotchu](https://www.youtube.com/watch?v=foil0hzl4Pg)(https://www.youtube.com/watch?v=foil0hzl4Pg)
 
-https://github.com/ryancdotorg/brainflayer
+![Brainflayer](https://github.com/ryancdotorg/brainflayer)(https://github.com/ryancdotorg/brainflayer)
 
 
 
