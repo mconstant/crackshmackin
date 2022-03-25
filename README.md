@@ -27,7 +27,7 @@ This repo was not written by Satoshi. But we were inspired by his ability to sta
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/480631.png)](https://asciinema.org/a/480631)
+[![asciicast](https://asciinema.org/a/480631.svg)](https://asciinema.org/a/480631)
 
 ## Prior Work / Inspiration
 
