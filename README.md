@@ -130,7 +130,7 @@ Seriously don't ever use song lyrics and a SHA256 hashing algorithm to cook up y
 
 [![RyanGotchu](https://img.youtube.com/vi/foil0hzl4Pg/0.jpg)](https://www.youtube.com/watch?v=foil0hzl4Pg=1s)
 
-[![Brainflayer](https://github.com/ryancdotorg/brainflayer)](https://github.com/ryancdotorg/brainflayer)
+[Brainflayer](https://github.com/ryancdotorg/brainflayer)
 
 
 
