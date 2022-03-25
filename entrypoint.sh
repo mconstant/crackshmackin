@@ -3,5 +3,4 @@ ruby find_satoshi.rb &
 sleep 1
 ruby get_lucky.rb &
 sleep 1
-tail -f /crackshmackin/data/shucks.sux &
-tail -f /crackshmackin/data/f.addresses 
+tail -f /crackshmackin/data/fyeah.bux
