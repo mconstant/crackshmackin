@@ -1,6 +1,6 @@
 FROM ruby:slim
 
-RUN apt-get update && apt-get install build-essential curl -y
+RUN apt-get update && apt-get install build-essential curl tmux -y
 
 # max size of f.addresses file in bytes, e.g. 20000000 would make it max out at ~20Mb
 ENV MAX_BYTES_F_ADDRESSES=20000000
