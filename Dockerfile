@@ -17,6 +17,7 @@ COPY Gemfile .
 RUN bundle install
 COPY find_satoshi.rb .
 COPY get_lucky.rb .
+COPY crackshmackin.god .
 COPY entrypoint.sh .
 RUN chmod +x entrypoint.sh
 
