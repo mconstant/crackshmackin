@@ -61,11 +61,15 @@ begin
   addresses_checked = 0
   # satoshi address with ~64BTC '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'
   i_talked = false
+  i_mentioned_the_file_size_limit_was_reached = false
   until current_address == '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa' do
     # virtually infinite loop intentionally
     if File.size('/crackshmackin/data/f.addresses') > ENV["MAX_BYTES_F_ADDRESSES"].to_i
-      `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: She cannot take any more of this, Captain! f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f / 1000000).to_i}MB reached."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
-      puts("f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f / 1000000).to_i}MB reached.")
+      unless i_mentioned_the_file_size_limit_was_reached
+        `curl -H "Content-Type: application/json" -d '{"username": "crackshmackin", "content": "#{petname}: f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f / 1000000).to_i}MB reached."}' #{ENV["CRACKSHMACKIN_DISCORD_HOOK"]}` unless (ENV["CRACKSHMACKIN_DISCORD_HOOK"].empty?)
+        puts("f.addresses file size limit of #{(ENV["MAX_BYTES_F_ADDRESSES"].to_f / 1000000).to_i}MB reached.")
+        i_mentioned_the_file_size_limit_was_reached = true
+      end
     else
       File.open('/crackshmackin/data/f.addresses', 'a') do |f|
         f.puts("WIF: #{current_wif} | Address: #{current_address}")
