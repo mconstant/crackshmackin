@@ -1,4 +1,4 @@
-FROM ruby:slim
+FROM ruby:3.0-slim
 
 RUN apt-get update && apt-get install build-essential curl -y
 
